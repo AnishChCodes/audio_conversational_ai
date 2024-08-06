@@ -1,0 +1,2097 @@
+This is an INFO message
+This is a WARNING message
+This is an ERROR message
+This is a CRITICAL message
+This is an INFO message
+This is a DEBUG message
+This is a WARNING message
+This is an ERROR message
+This is a CRITICAL message
+haha
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+In process_question
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+In process_question
+In process_question
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+In process_question
+In process_question
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+'NoneType' object has no attribute 'Redis'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 42, in process_question
+    my_background_task.delay(10, 20)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 797, in send_task
+    with self.producer_or_acquire(producer) as P:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 932, in producer_or_acquire
+    producer, self.producer_pool.acquire, block=True,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 1354, in producer_pool
+    return self.amqp.producer_pool
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/amqp.py", line 591, in producer_pool
+    self.app.connection_for_write()]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 829, in connection_for_write
+    return self._connection(url or self.conf.broker_write_url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/celery/app/base.py", line 880, in _connection
+    return self.amqp.Connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/connection.py", line 201, in __init__
+    if not get_transport_cls(transport).can_parse_url:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 90, in get_transport_cls
+    _transport_cache[transport] = resolve_transport(transport)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py", line 75, in resolve_transport
+    return symbol_by_name(transport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/kombu/transport/redis.py", line 267, in <module>
+    class PrefixedStrictRedis(GlobalKeyPrefixMixin, redis.Redis):
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Redis'
+In process_question
+In process_question
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+In process_question
+In process_question
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+In process_question
+In process_question
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+In process_question
+In process_question
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: mp3, ogg, wav
+In process_question
+In process_question
+400 Bad Request: Invalid file type. Allowed types are: ogg, mp3, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: ogg, mp3, wav
+400 Bad Request: Invalid file type. Allowed types are: ogg, mp3, wav
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 18, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    validate_file(request.files)
+  File "/Users/anish/personal/1/1/validators/qna_request.py", line 18, in validate_file
+    raise BadRequest(f"Invalid file type. Allowed types are: {', '.join(allowed_extensions)}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Invalid file type. Allowed types are: ogg, mp3, wav
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+[Errno 2] No such file or directory: 'uploads/d44e4b24-12c7-43ec-a1ab-87fd15dd0655mp3'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    audio_file.save(f'{filename}')
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'uploads/d44e4b24-12c7-43ec-a1ab-87fd15dd0655mp3'
+[Errno 2] No such file or directory: 'uploads/d44e4b24-12c7-43ec-a1ab-87fd15dd0655mp3'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 43, in process_question
+    audio_file.save(f'{filename}')
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'uploads/d44e4b24-12c7-43ec-a1ab-87fd15dd0655mp3'
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+    ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 6, in __init__
+    self.storage_client = storage.Client()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/client.py", line 226, in __init__
+    super(Client, self).__init__(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+    ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 6, in __init__
+    self.storage_client = storage.Client()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/client.py", line 226, in __init__
+    super(Client, self).__init__(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+403 POST https://storage.googleapis.com/upload/storage/v1/b/qna-bucket-ac/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+    "errors": [
+      {
+        "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2643, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2449, in _do_upload
+    response = self._do_multipart_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1962, in _do_multipart_upload
+    response = upload.transmit(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/upload.py", line 153, in transmit
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/upload.py", line 149, in retriable_request
+    self._process_response(result)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/_upload.py", line 125, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/_helpers.py", line 108, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 11, in upload_blob
+    self.blob.upload_from_filename(source_file_name)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2947, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2826, in _handle_filename_and_upload
+    self._prep_and_do_upload(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2661, in _prep_and_do_upload
+    _raise_from_invalid_response(exc)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 4838, in _raise_from_invalid_response
+    raise exceptions.from_http_status(response.status_code, message, response=response)
+google.api_core.exceptions.Forbidden: 403 POST https://storage.googleapis.com/upload/storage/v1/b/qna-bucket-ac/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+    "errors": [
+      {
+        "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+403 POST https://storage.googleapis.com/upload/storage/v1/b/qna-bucket-ac/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+    "errors": [
+      {
+        "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2643, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2449, in _do_upload
+    response = self._do_multipart_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1962, in _do_multipart_upload
+    response = upload.transmit(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/upload.py", line 153, in transmit
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/requests/upload.py", line 149, in retriable_request
+    self._process_response(result)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/_upload.py", line 125, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/resumable_media/_helpers.py", line 108, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 11, in upload_blob
+    self.blob.upload_from_filename(source_file_name)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2947, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2826, in _handle_filename_and_upload
+    self._prep_and_do_upload(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 2661, in _prep_and_do_upload
+    _raise_from_invalid_response(exc)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 4838, in _raise_from_invalid_response
+    raise exceptions.from_http_status(response.status_code, message, response=response)
+google.api_core.exceptions.Forbidden: 403 POST https://storage.googleapis.com/upload/storage/v1/b/qna-bucket-ac/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+    "errors": [
+      {
+        "message": "ana-account-ac@golden-shine-427311-t6.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 21, in upload_blob
+    client = speech.SpeechClient()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 680, in __init__
+    self._transport = Transport(
+                      ^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/transports/grpc.py", line 150, in __init__
+    super().__init__(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/transports/base.py", line 98, in __init__
+    credentials, _ = google.auth.default(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 21, in upload_blob
+    client = speech.SpeechClient()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 680, in __init__
+    self._transport = Transport(
+                      ^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/transports/grpc.py", line 150, in __init__
+    super().__init__(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/transports/base.py", line 98, in __init__
+    credentials, _ = google.auth.default(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+400 Audio URI `https://storage.googleapis.com/qna-bucket-ac/065ab6fc-ce96-4997-855a-5c47d32b7368.mp3` is an invalid GCS path.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 30, in upload_blob
+    response = client.recognize(config=config, audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Audio URI `https://storage.googleapis.com/qna-bucket-ac/065ab6fc-ce96-4997-855a-5c47d32b7368.mp3` is an invalid GCS path.
+400 Audio URI `https://storage.googleapis.com/qna-bucket-ac/065ab6fc-ce96-4997-855a-5c47d32b7368.mp3` is an invalid GCS path.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 30, in upload_blob
+    response = client.recognize(config=config, audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Audio URI `https://storage.googleapis.com/qna-bucket-ac/065ab6fc-ce96-4997-855a-5c47d32b7368.mp3` is an invalid GCS path.
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+400 Invalid recognition 'config': bad encoding..
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 30, in upload_blob
+    response = client.recognize(audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+400 Invalid recognition 'config': bad encoding..
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 45, in process_question
+    BlobStorage().upload_blob(filename)
+  File "/Users/anish/personal/1/1/services/google_cloud.py", line 30, in upload_blob
+    response = client.recognize(audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/a45054d0-1e04-4697-894c-8bddf130a0db.mp3'
+In upload_blob source_file_name = 'uploads/a45054d0-1e04-4697-894c-8bddf130a0db.mp3'
+response =  None
+response =  None
+File uploads/a45054d0-1e04-4697-894c-8bddf130a0db.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3
+File uploads/a45054d0-1e04-4697-894c-8bddf130a0db.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3
+(sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', 'gs://qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: qn_a
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 49, in process_question
+    db.session.commit()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1302, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1277, in _prepare_impl
+    self.session.flush()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4341, in flush
+    self._flush(objects)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4476, in _flush
+    with util.safe_reraise():
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4437, in _flush
+    flush_context.execute()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', 'gs://qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+(sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', 'gs://qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: qn_a
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 49, in process_question
+    db.session.commit()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1302, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1277, in _prepare_impl
+    self.session.flush()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4341, in flush
+    self._flush(objects)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4476, in _flush
+    with util.safe_reraise():
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4437, in _flush
+    flush_context.execute()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', 'gs://qna-bucket-ac/a45054d0-1e04-4697-894c-8bddf130a0db.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/4c821a82-d901-4824-9da8-4e77ea21983d.mp3'
+In upload_blob source_file_name = 'uploads/4c821a82-d901-4824-9da8-4e77ea21983d.mp3'
+response =  None
+response =  None
+File uploads/4c821a82-d901-4824-9da8-4e77ea21983d.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3
+File uploads/4c821a82-d901-4824-9da8-4e77ea21983d.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3
+(sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', 'gs://qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: qn_a
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 49, in process_question
+    db.session.commit()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1302, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1277, in _prepare_impl
+    self.session.flush()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4341, in flush
+    self._flush(objects)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4476, in _flush
+    with util.safe_reraise():
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4437, in _flush
+    flush_context.execute()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', 'gs://qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+(sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', 'gs://qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: qn_a
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 20, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 49, in process_question
+    db.session.commit()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1302, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1277, in _prepare_impl
+    self.session.flush()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4341, in flush
+    self._flush(objects)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4476, in _flush
+    with util.safe_reraise():
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4437, in _flush
+    flush_context.execute()
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: qn_a
+[SQL: INSERT INTO qn_a (incoming_file_url, incoming_file_gsc_uri, outgoing_file_url, incoming_text, outgoing_text, state, reason) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('https://storage.googleapis.com/qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', 'gs://qna-bucket-ac/4c821a82-d901-4824-9da8-4e77ea21983d.mp3', None, None, None, 'audio_received', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/53d74688-f241-45ea-b2b8-e53b3e283748.mp3'
+In upload_blob source_file_name = 'uploads/53d74688-f241-45ea-b2b8-e53b3e283748.mp3'
+response =  None
+response =  None
+File uploads/53d74688-f241-45ea-b2b8-e53b3e283748.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/53d74688-f241-45ea-b2b8-e53b3e283748.mp3
+File uploads/53d74688-f241-45ea-b2b8-e53b3e283748.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/53d74688-f241-45ea-b2b8-e53b3e283748.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3'
+In upload_blob source_file_name = 'uploads/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3'
+response =  None
+response =  None
+File uploads/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3
+File uploads/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/630dd6d1-bc1d-4148-bb34-aeef397de274.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3'
+In upload_blob source_file_name = 'uploads/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3'
+response =  None
+response =  None
+File uploads/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3
+File uploads/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/f659f00b-b0ca-4318-8bc5-b94717f459ae.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'uploads/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3'
+In upload_blob source_file_name = 'uploads/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3'
+response =  None
+response =  None
+File uploads/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3
+File uploads/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d23bf945-41b0-49b8-a6dd-0362edbaee49.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3'
+In upload_blob source_file_name = 'media/uploads/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3'
+response =  None
+response =  None
+File media/uploads/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3
+File media/uploads/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3
+In generate_answer
+In generate_answer
+In SpeechRecogniser
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3'
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/a63b0082-da00-4420-a9d8-5ff35afe96ab.mp3'
+transcript = ' which is the meaning of life '
+transcript = ' which is the meaning of life '
+In Gemini
+In Gemini
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/d5618243-f235-486f-a92e-87703fb45f41.mp3'
+In upload_blob source_file_name = 'media/uploads/d5618243-f235-486f-a92e-87703fb45f41.mp3'
+response =  None
+response =  None
+File media/uploads/d5618243-f235-486f-a92e-87703fb45f41.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d5618243-f235-486f-a92e-87703fb45f41.mp3
+File media/uploads/d5618243-f235-486f-a92e-87703fb45f41.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d5618243-f235-486f-a92e-87703fb45f41.mp3
+In generate_answer
+In generate_answer
+In SpeechRecogniser
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/d5618243-f235-486f-a92e-87703fb45f41.mp3'
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/d5618243-f235-486f-a92e-87703fb45f41.mp3'
+transcript = ' which is the meaning of life '
+transcript = ' which is the meaning of life '
+In Gemini
+In Gemini
+'NoneType' object has no attribute 'GenerativeModel'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/tasks/qna.py", line 23, in generate_answer
+    answer = Gemini().generate_text_content(transcript)
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/services/gemini.py", line 12, in __init__
+    self.model = self.genai_obj.GenerativeModel('gemini-1.5-flash')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'GenerativeModel'
+'NoneType' object has no attribute 'GenerativeModel'
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/tasks/qna.py", line 23, in generate_answer
+    answer = Gemini().generate_text_content(transcript)
+             ^^^^^^^^
+  File "/Users/anish/personal/1/1/services/gemini.py", line 12, in __init__
+    self.model = self.genai_obj.GenerativeModel('gemini-1.5-flash')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'GenerativeModel'
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3'
+In upload_blob source_file_name = 'media/uploads/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3'
+response =  None
+response =  None
+File media/uploads/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3
+File media/uploads/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3
+In generate_answer
+In generate_answer
+In SpeechRecogniser
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3'
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/0a84020b-34d8-4dd5-91bd-0b4f1a4a04b5.mp3'
+transcript = ' which is the meaning of life '
+transcript = ' which is the meaning of life '
+In Gemini
+In Gemini
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3'
+In upload_blob source_file_name = 'media/uploads/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3'
+response =  None
+response =  None
+File media/uploads/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3
+File media/uploads/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3
+In generate_answer
+In generate_answer
+In SpeechRecogniser
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3'
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/c55a8539-5bd7-46a1-a2a8-de07ddf8733d.mp3'
+transcript = ' which is the meaning of life '
+transcript = ' which is the meaning of life '
+In Gemini
+In Gemini
+Gemini initiated
+Gemini initiated
+In generate_text_content - prompt = ' which is the meaning of life '
+In generate_text_content - prompt = ' which is the meaning of life '
+In TTS
+In TTS
+TTS initiated
+TTS initiated
+In generate_speech
+In generate_speech
+Audio output_file = 'media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3'
+Audio output_file = 'media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3'
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3'
+In upload_blob source_file_name = 'media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3'
+response =  None
+response =  None
+File media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3
+File media/generated/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/667b6a59-8fe5-4636-8982-4312a21b7cbc.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3'
+In upload_blob source_file_name = 'media/uploads/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3'
+response =  None
+response =  None
+File media/uploads/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3
+File media/uploads/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/6bcc1fc0-5851-41a8-a552-aff4691bc462.mp3
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/be74d3de-201e-40cd-a88b-692efab249be.mp3'
+In upload_blob source_file_name = 'media/uploads/be74d3de-201e-40cd-a88b-692efab249be.mp3'
+response =  None
+response =  None
+File media/uploads/be74d3de-201e-40cd-a88b-692efab249be.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/be74d3de-201e-40cd-a88b-692efab249be.mp3
+File media/uploads/be74d3de-201e-40cd-a88b-692efab249be.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/be74d3de-201e-40cd-a88b-692efab249be.mp3
+In generate_answer
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3'
+In upload_blob source_file_name = 'media/uploads/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3'
+response =  None
+response =  None
+File media/uploads/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3
+File media/uploads/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/63adcf1a-6a02-4688-b470-7aeefdaec2ad.mp3
+In generate_answer
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3'
+In upload_blob source_file_name = 'media/uploads/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3'
+response =  None
+response =  None
+File media/uploads/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3
+File media/uploads/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3
+In generate_answer
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/085a3dc7-c1f2-4c3b-ba50-70ca14c0f5bd.mp3'
+transcript = ' which is the meaning of life '
+In Gemini
+Gemini initiated
+In generate_text_content - prompt = ' which is the meaning of life '
+In TTS
+TTS initiated
+In generate_speech
+Audio output_file = 'media/generated/db52f092-fc90-4012-9572-9a64b88df151.mp3'
+In BlobStorage
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/generated/db52f092-fc90-4012-9572-9a64b88df151.mp3'
+response =  None
+File media/generated/db52f092-fc90-4012-9572-9a64b88df151.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/db52f092-fc90-4012-9572-9a64b88df151.mp3
+In decorated token_required
+In decorated token_required
+Signature has expired
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 16, in decorated
+    jwt.decode(token, app.config['secret_key'], algorithms="HS256")
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 162, in decode_complete
+    self._validate_claims(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 248, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 306, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+Signature has expired
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/app_server/auth_utils.py", line 16, in decorated
+    jwt.decode(token, app.config['secret_key'], algorithms="HS256")
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 162, in decode_complete
+    self._validate_claims(
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 248, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 306, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3'
+In upload_blob source_file_name = 'media/uploads/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3'
+response =  None
+response =  None
+File media/uploads/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3
+File media/uploads/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3
+In generate_answer
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/d324e35d-ec60-4cbe-8bc9-5a2d67cb49e0.mp3'
+transcript = ' which is the meaning of life '
+In Gemini
+Gemini initiated
+In generate_text_content - prompt = ' which is the meaning of life '
+In TTS
+TTS initiated
+In generate_speech
+Audio output_file = 'media/generated/a34aaf06-30f4-4283-9f30-48ce2160174f.mp3'
+In BlobStorage
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/generated/a34aaf06-30f4-4283-9f30-48ce2160174f.mp3'
+response =  None
+File media/generated/a34aaf06-30f4-4283-9f30-48ce2160174f.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/a34aaf06-30f4-4283-9f30-48ce2160174f.mp3
+Object of type QnAStates is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 66, in download_audio
+    return jsonify(response)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type QnAStates is not JSON serializable
+Object of type QnAStates is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/app.py", line 66, in download_audio
+    return jsonify(response)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/anish/personal/1/1/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type QnAStates is not JSON serializable
+In decorated token_required
+In decorated token_required
+In process_question
+In process_question
+In BlobStorage
+In BlobStorage
+In BlobStorage initiated
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/uploads/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3'
+In upload_blob source_file_name = 'media/uploads/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3'
+response =  None
+response =  None
+File media/uploads/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3
+File media/uploads/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3
+In generate_answer
+In SpeechRecogniser
+In get_transcript gcs_uri = 'gs://qna-bucket-ac/3809f181-bb70-4bb1-bc54-45662a167ddb.mp3'
+transcript = ' which is the meaning of life '
+In Gemini
+Gemini initiated
+In generate_text_content - prompt = ' which is the meaning of life '
+In TTS
+TTS initiated
+In generate_speech
+Audio output_file = 'media/generated/b286bf96-0d34-49ab-8df3-825ff6e1afe3.mp3'
+In BlobStorage
+In BlobStorage initiated
+In upload_blob source_file_name = 'media/generated/b286bf96-0d34-49ab-8df3-825ff6e1afe3.mp3'
+response =  None
+File media/generated/b286bf96-0d34-49ab-8df3-825ff6e1afe3.mp3 uploaded. URL: https://storage.googleapis.com/qna-bucket-ac/b286bf96-0d34-49ab-8df3-825ff6e1afe3.mp3
